@@ -1,0 +1,40 @@
+{
+  "name": "spilopelia",
+  "version": "0.1.0",
+  "description": "React Sub Router",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "NODE_ENV=development falco -c -m entry/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fratercula/spilopelia.git"
+  },
+  "keywords": [
+    "router",
+    "react",
+    "sub"
+  ],
+  "author": "LoeiFy <LoeiFy@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/fratercula/spilopelia/issues"
+  },
+  "homepage": "https://github.com/fratercula/spilopelia#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2"
+  },
+  "dependencies": {
+    "history": "^4.9.0",
+    "path-to-regexp": "^3.0.0"
+  }
+}
