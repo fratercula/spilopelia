@@ -1,7 +1,9 @@
-import React from 'react' // eslint-disable-line import/no-unresolved
+import React from 'react'
 import PropTypes from 'prop-types'
 import { getPathName, matchPath } from './history'
 import Link from './link'
+
+const empty = () => null
 
 function NavLink(props) {
   const {
@@ -16,7 +18,7 @@ function NavLink(props) {
   const pathname = getPathName()
   const match = matchPath(pathname, to)
 
-  const isActive = isActiveFn ? isActiveFn(match, { pathname }) : match
+  const isActive = isActiveFn === empty ? match : isActiveFn(match, { pathname })
   const className = isActive ? `${classNames} ${activeClassName}` : classNames
   const style = isActive ? { ...styles, ...activeStyle } : styles
 
@@ -42,6 +44,7 @@ NavLink.propTypes = {
 NavLink.defaultProps = {
   activeClassName: 'active',
   className: '',
+  isActive: empty,
   style: {},
   activeStyle: {},
 }

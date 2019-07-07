@@ -1,4 +1,4 @@
-import { Component, cloneElement, Children } from 'react' // eslint-disable-line import/no-unresolved
+import { Component, cloneElement, Children } from 'react'
 import PropTypes from 'prop-types'
 import history, { getPathName } from './history'
 

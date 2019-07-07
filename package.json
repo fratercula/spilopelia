@@ -4,7 +4,8 @@
   "description": "React Sub Router",
   "main": "lib/index.js",
   "scripts": {
-    "start": "NODE_ENV=development falco -c -m entry/index.js"
+    "start": "NODE_ENV=development falco -c -m entry/index.js",
+    "cjs": "babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
@@ -18,13 +19,19 @@
   "author": "LoeiFy <LoeiFy@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "react": "*"
+    "react": "*",
+    "prop-types": "*"
   },
   "bugs": {
     "url": "https://github.com/fratercula/spilopelia/issues"
   },
   "homepage": "https://github.com/fratercula/spilopelia#readme",
   "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.2",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
@@ -35,7 +42,6 @@
   },
   "dependencies": {
     "history": "^4.9.0",
-    "path-to-regexp": "^3.0.0",
-    "prop-types": "^15.7.2"
+    "path-to-regexp": "^3.0.0"
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from 'react' // eslint-disable-line import/no-unresolved
+import { Component } from 'react'
 import PropTypes from 'prop-types'
 import history from './history'
 
